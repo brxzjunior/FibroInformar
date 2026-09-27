@@ -55,13 +55,13 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ isOpen, onClos
         <div className="space-y-4 text-calm-text text-sm leading-relaxed">
           <div className="p-3.5 bg-warm-50 border border-warm-200 rounded-xl flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-warm-600 shrink-0 mt-0.5" />
-            <p className="text-xs text-warm-700">
-              <strong>Atenção:</strong> As informações contidas no FibroInformar têm caráter estritamente educativo e informativo.
+            <p className="text-xs sm:text-sm text-warm-900 leading-relaxed font-medium">
+              Este aplicativo possui finalidade educativa e não substitui avaliação, diagnóstico ou acompanhamento realizado por profissionais de saúde.
             </p>
           </div>
 
-          <p>
-            O aplicativo <strong>NÃO</strong> substitui, em nenhuma hipótese, consultas médicas, avaliações fisioterapêuticas, diagnósticos clínicos ou planos de tratamento prescritos por profissionais de saúde.
+          <p className="text-xs sm:text-sm">
+            O <strong>FibroInformar</strong> tem por objetivo facilitar o acesso a informações claras e baseadas em literatura científica sobre a fibromialgia, promovendo o entendimento e o autocuidado.
           </p>
 
           <div className="border-t border-stone-100 pt-3">

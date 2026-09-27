@@ -50,7 +50,7 @@ export const MenuHub: React.FC = () => {
           <article
             key={module.id}
             onClick={() => navigate(module.route)}
-            className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft hover:shadow-card hover:border-brand-300 transition-all cursor-pointer group flex flex-col justify-between space-y-4"
+            className="bg-white rounded-2xl border border-calm-border p-4.5 sm:p-5 shadow-soft hover:shadow-card hover:border-brand-300 transition-all cursor-pointer group flex flex-col justify-between space-y-4"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">

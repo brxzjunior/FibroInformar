@@ -19,8 +19,8 @@ const navItems: NavItem[] = [
 export const BottomNav: React.FC = () => {
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-calm-border safe-pb shadow-card"
-      aria-label="Navegação Principal"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-calm-border safe-pb shadow-card"
+      aria-label="Navegação Inferior Mobile"
     >
       <div className="max-w-md mx-auto flex items-center justify-around px-2 py-1">
         {navItems.map((item) => {

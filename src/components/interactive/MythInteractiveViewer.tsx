@@ -104,37 +104,39 @@ export const MythInteractiveViewer: React.FC<MythInteractiveViewerProps> = ({ my
           </div>
 
           {/* Cartão da afirmação */}
-          <div className="bg-white rounded-2xl border border-calm-border p-6 shadow-soft space-y-6">
+          <div className="bg-white rounded-2xl border border-calm-border p-4.5 sm:p-6 shadow-soft space-y-5">
             <div className="space-y-2">
               <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-stone-500 uppercase tracking-wider">
                 <HelpCircle className="w-4 h-4 text-brand-600" />
                 O que você acha dessa frase?
               </span>
-              <p className="text-xl sm:text-2xl font-bold text-brand-950 leading-snug">
+              <p className="text-lg sm:text-xl md:text-2xl font-bold text-brand-950 leading-snug">
                 "{currentMyth.statement}"
               </p>
             </div>
 
             {/* Opções de escolha se o usuário ainda não respondeu */}
             {!hasAnswered ? (
-              <div className="pt-2 space-y-3">
+              <div className="pt-1 space-y-3">
                 <p className="text-xs text-calm-muted">
                   Toque em uma das opções abaixo para revelar a evidência científica:
                 </p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3">
                   <button
                     onClick={() => handleGuess(false)}
-                    className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-stone-200 bg-stone-50 hover:bg-warm-50 hover:border-warm-500 text-stone-800 hover:text-warm-700 font-bold transition-all min-h-[58px] active:scale-95"
+                    className="flex flex-col items-center justify-center gap-1.5 p-3 sm:p-4 rounded-xl border-2 border-stone-200 bg-stone-50 hover:bg-warm-50 hover:border-warm-500 text-stone-800 hover:text-warm-800 font-bold transition-all min-h-[58px] active:scale-95 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-warm-600"
+                    aria-label="Responder: É um Mito"
                   >
-                    <XCircle className="w-6 h-6 text-warm-600" />
+                    <XCircle className="w-5 h-5 sm:w-6 sm:h-6 text-warm-600 shrink-0" />
                     <span>É um MITO</span>
                   </button>
 
                   <button
                     onClick={() => handleGuess(true)}
-                    className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-stone-200 bg-stone-50 hover:bg-sage-50 hover:border-sage-600 text-stone-800 hover:text-sage-800 font-bold transition-all min-h-[58px] active:scale-95"
+                    className="flex flex-col items-center justify-center gap-1.5 p-3 sm:p-4 rounded-xl border-2 border-stone-200 bg-stone-50 hover:bg-sage-50 hover:border-sage-600 text-stone-800 hover:text-sage-800 font-bold transition-all min-h-[58px] active:scale-95 text-xs sm:text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-600"
+                    aria-label="Responder: É uma Verdade"
                   >
-                    <CheckCircle className="w-6 h-6 text-sage-600" />
+                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-sage-600 shrink-0" />
                     <span>É uma VERDADE</span>
                   </button>
                 </div>

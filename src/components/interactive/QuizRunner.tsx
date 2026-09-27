@@ -153,8 +153,8 @@ export const QuizRunner: React.FC<QuizRunnerProps> = ({ questions }) => {
       </div>
 
       {/* Cartão da Pergunta */}
-      <div className="bg-white rounded-3xl border border-calm-border p-6 shadow-soft space-y-6">
-        <h2 className="text-lg sm:text-xl font-bold text-brand-950 leading-snug">
+      <div className="bg-white rounded-2xl sm:rounded-3xl border border-calm-border p-4.5 sm:p-6 shadow-soft space-y-5">
+        <h2 className="text-base sm:text-lg md:text-xl font-bold text-brand-950 leading-snug">
           {currentQ.question}
         </h2>
 

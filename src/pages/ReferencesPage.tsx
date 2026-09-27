@@ -48,7 +48,7 @@ export const ReferencesPage: React.FC = () => {
           {academicReferences.map((ref, idx) => (
             <article
               key={ref.id}
-              className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft space-y-3"
+              className="bg-white rounded-2xl border border-calm-border p-4 sm:p-5 shadow-soft space-y-3"
             >
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <Badge variant={ref.type === 'Diretriz Clínica' ? 'purple' : 'sage'} size="sm">
@@ -60,7 +60,7 @@ export const ReferencesPage: React.FC = () => {
               </div>
 
               <div className="space-y-1">
-                <h3 className="font-bold text-base sm:text-lg text-brand-950 leading-snug">
+                <h3 className="font-bold text-base sm:text-lg text-brand-950 leading-snug break-words">
                   {ref.title}
                 </h3>
                 <p className="text-xs text-stone-600 font-medium">
@@ -81,7 +81,8 @@ export const ReferencesPage: React.FC = () => {
                     href={ref.doiOrUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-700 hover:text-brand-900 hover:underline"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-700 hover:text-brand-900 hover:underline min-h-[44px] py-1"
+                    aria-label={`Acessar publicação externa: ${ref.title}`}
                   >
                     <span>Acessar fonte / DOI</span>
                     <ExternalLink className="w-3.5 h-3.5" />

@@ -20,7 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div className="min-h-screen flex flex-col bg-calm-bg text-calm-text">
       <Header />
 
-      <main className="flex-1 w-full max-w-4xl mx-auto px-4 sm:px-6 pt-4 pb-28 md:pb-20">
+      <main className="flex-1 w-full max-w-4xl mx-auto px-3.5 sm:px-6 pt-4 pb-28 md:pb-12">
         {children}
       </main>
 

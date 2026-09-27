@@ -95,10 +95,16 @@ O design prioriza:
 
 * Paleta humanizada inspirada na conscientização (tons suaves de lavanda/violeta e sálvia/menta);
 * Hierarquia visual clara e leitura sem fadiga cognitiva;
-* Tipografia legível e contraste em conformidade com WCAG;
-* Navegação intuitiva com touch targets ergonômicos (>= 48px);
-* Ausência de layouts genéricos e templates de IA;
-* Adaptação pensada para cada viewport (mobile, tablet e desktop).
+* Tipografia legível e contraste em conformidade com WCAG (nível AAA);
+* Navegação responsiva adaptativa: **Barra Inferior (Thumb Zone)** no celular (< 768px) e **Menu de Topo Integrado** no tablet/desktop (>= 768px);
+* Variação visual contextual para evitar monotonia:
+  * *Entenda a Fibromialgia*: Leitura editorial humanista e metáfora do alarme corporal;
+  * *Principais Sintomas*: Escaneabilidade rápida em cartões com marcadores visuais dedicados;
+  * *Fisioterapia e Movimento*: Infográfico comparativo do Ciclo da Inatividade vs. Ciclo Virtuoso da Fisioterapia ("start low, go slow");
+  * *Qualidade de Vida*: Painel dos 3 Pilares do Autocuidado (Pacing, Sono e Pausas);
+* Card "Ponto de Partida" no início com área de toque completa e hierarquia destacada;
+* Áreas de toque ergonômicas (>= 48px) em botões e alternativas;
+* Ausência de layouts genéricos e templates de IA.
 
 ## 🏗️ Arquitetura
 

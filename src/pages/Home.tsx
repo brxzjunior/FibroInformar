@@ -18,8 +18,8 @@ export const Home: React.FC = () => {
 
   return (
     <div className="space-y-6 sm:space-y-8 animate-in fade-in duration-300">
-      {/* Bloco de Acolhimento Humanizado */}
-      <section className="bg-gradient-to-br from-brand-50 via-white to-sage-50/50 rounded-3xl border border-calm-border p-6 sm:p-8 shadow-soft space-y-5">
+      {/* Bloco Principal de Apresentação (Hero Humanizado) */}
+      <section className="bg-gradient-to-br from-brand-50/90 via-white to-sage-50/60 rounded-3xl border border-calm-border p-5 sm:p-7 md:p-8 shadow-soft space-y-5">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="purple" size="sm">
             <Heart className="w-3.5 h-3.5 text-brand-600 fill-brand-600" />
@@ -30,24 +30,24 @@ export const Home: React.FC = () => {
           </Badge>
         </div>
 
-        <div className="space-y-2.5 max-w-2xl">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-brand-950 tracking-tight leading-tight">
+        <div className="space-y-3 max-w-2xl">
+          <h1 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-extrabold text-brand-950 tracking-tight leading-tight">
             Conhecer para cuidar e viver melhor com a fibromialgia.
           </h1>
-          <p className="text-base sm:text-lg text-calm-muted leading-relaxed">
-            Uma abordagem serena e acessível para entender a dor, desmistificar crenças e descobrir o papel transformador da fisioterapia e do movimento consciente.
+          <p className="text-sm sm:text-base md:text-lg text-calm-muted leading-relaxed">
+            Uma abordagem serena e acessível para entender a neurofisiologia da dor, desmistificar crenças e descobrir o papel transformador da fisioterapia e do movimento consciente.
           </p>
         </div>
 
-        {/* Chamada para ação orientada à trilha ou exploração */}
-        <div className="pt-2 flex flex-col sm:flex-row gap-3">
+        {/* Chamadas para ação empilhadas no mobile e alinhadas em tablet/desktop */}
+        <div className="pt-1 flex flex-col sm:flex-row gap-3 w-full">
           <Button
             variant="primary"
             size="lg"
             onClick={() => navigate('/entenda')}
-            className="group"
+            className="w-full sm:w-auto group justify-center"
           >
-            <span>Iniciar Trilha de Aprendizado</span>
+            <span>Começar pelo Módulo 1</span>
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Button>
 
@@ -55,124 +55,145 @@ export const Home: React.FC = () => {
             variant="outline"
             size="lg"
             onClick={() => navigate('/menu')}
+            className="w-full sm:w-auto justify-center"
           >
             <BookOpen className="w-5 h-5 mr-2" />
-            <span>Ver Todos os Temas</span>
+            <span>Explorar Todos os Temas</span>
           </Button>
         </div>
       </section>
 
-      {/* Cartão de Primeiro Passo Recomendado */}
-      <section className="bg-white rounded-2xl border border-calm-border p-5 sm:p-6 shadow-soft space-y-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-sage-500 animate-pulse" />
-            <span className="text-xs font-bold uppercase tracking-wider text-calm-muted">
-              Ponto de Partida
+      {/* Cartão de Ponto de Partida Recomendado */}
+      <section 
+        onClick={() => navigate('/entenda')}
+        className="bg-white rounded-2xl border-2 border-brand-200/80 p-5 sm:p-6 shadow-soft hover:shadow-card hover:border-brand-400 transition-all cursor-pointer group"
+      >
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-brand-600 animate-pulse" />
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-800">
+                Ponto de Partida Recomendado
+              </span>
+            </div>
+            <span className="text-xs text-stone-500 font-medium flex items-center gap-1 shrink-0">
+              <Clock className="w-3.5 h-3.5 text-stone-400" /> 3 min de leitura
             </span>
           </div>
-          <span className="text-xs text-stone-500 flex items-center gap-1 font-medium">
-            <Clock className="w-3.5 h-3.5" /> 3 minutos de leitura
-          </span>
-        </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div className="space-y-1">
-            <h2 className="text-xl font-bold text-brand-900">
-              O que realmente é a Fibromialgia?
+          <div className="space-y-1.5">
+            <h2 className="text-lg sm:text-xl font-bold text-brand-950 group-hover:text-brand-700 transition-colors">
+              Módulo 1: O que realmente é a Fibromialgia?
             </h2>
-            <p className="text-sm text-calm-muted leading-relaxed max-w-xl">
-              Entenda como o cérebro processa os sinais de dor e por que os exames laboratoriais normais não anulam o que você sente.
+            <p className="text-xs sm:text-sm text-calm-muted leading-relaxed">
+              Entenda como o sistema nervoso regula o "volume" dos sinais dolorosos e por que exames normais confirmam a ausência de lesão destrutiva, sem invalidar sua dor.
             </p>
           </div>
 
-          <button
-            onClick={() => navigate('/entenda')}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-brand-50 hover:bg-brand-100 text-brand-900 font-semibold text-sm transition-colors min-h-[48px] shrink-0"
-          >
-            <span>Ler Módulo 1</span>
-            <ChevronRight className="w-4 h-4 text-brand-700" />
-          </button>
+          <div className="pt-2 flex items-center justify-between border-t border-stone-100">
+            <span className="text-xs font-semibold text-brand-700 flex items-center gap-1 group-hover:underline">
+              <span>Iniciar leitura explicativa</span>
+            </span>
+            <div className="w-8 h-8 rounded-xl bg-brand-50 group-hover:bg-brand-100 text-brand-700 flex items-center justify-center transition-colors">
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Trilha de Experiências Práticas e Interativas */}
-      <section className="space-y-4">
+      {/* Experiências Interativas com Layouts Diferenciados */}
+      <section className="space-y-3.5">
         <div className="px-1">
-          <h2 className="text-lg font-bold text-brand-900">
+          <h2 className="text-base sm:text-lg font-bold text-brand-900">
             Experiências Interativas
           </h2>
           <p className="text-xs text-calm-muted">
-            Pratique, teste conceitos e tire dúvidas comuns de forma rápida.
+            Recursos dinâmicos para refletir, testar conceitos e sedimentar o aprendizado.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {/* Card Mitos e Verdades */}
-          <div
+          {/* Card Mitos & Verdades */}
+          <article
             onClick={() => navigate('/mitos-verdades')}
-            className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft hover:shadow-card hover:border-brand-300 transition-all cursor-pointer group space-y-3 flex flex-col justify-between"
+            className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft hover:shadow-card hover:border-warm-400 transition-all cursor-pointer group flex flex-col justify-between space-y-4"
           >
-            <div className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-warm-100 text-warm-700 flex items-center justify-center">
-                <HelpCircle className="w-5 h-5" />
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-xl bg-warm-100 text-warm-700 flex items-center justify-center">
+                  <HelpCircle className="w-5 h-5" />
+                </div>
+                <Badge variant="warm" size="sm">
+                  <span>6 Afirmações</span>
+                </Badge>
               </div>
-              <h3 className="text-lg font-bold text-brand-950 group-hover:text-brand-700 transition-colors">
-                Mitos & Verdades
-              </h3>
-              <p className="text-sm text-calm-muted leading-relaxed">
-                "Repouso absoluto faz bem?" "A dor é imaginação?" Teste seus conhecimentos contra os mitos mais comuns.
-              </p>
+
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-brand-950 group-hover:text-warm-700 transition-colors">
+                  Mitos & Verdades
+                </h3>
+                <p className="text-xs sm:text-sm text-calm-muted leading-relaxed mt-1">
+                  Repouso contínuo ajuda? A dor é apenas muscular? Descubra o que a ciência responde para as dúvidas mais comuns.
+                </p>
+              </div>
             </div>
 
-            <div className="pt-2 flex items-center text-sm font-semibold text-warm-700 group-hover:translate-x-0.5 transition-transform">
-              <span>Explorar afirmações</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
+            <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-warm-700">
+              <span>Opinar e conferir respostas</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </article>
 
           {/* Card Quiz Educativo */}
-          <div
+          <article
             onClick={() => navigate('/quiz')}
-            className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft hover:shadow-card hover:border-brand-300 transition-all cursor-pointer group space-y-3 flex flex-col justify-between"
+            className="bg-white rounded-2xl border border-calm-border p-5 shadow-soft hover:shadow-card hover:border-brand-400 transition-all cursor-pointer group flex flex-col justify-between space-y-4"
           >
-            <div className="space-y-2.5">
-              <div className="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
-                <Award className="w-5 h-5" />
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="w-10 h-10 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center">
+                  <Award className="w-5 h-5" />
+                </div>
+                <Badge variant="purple" size="sm">
+                  <span>Com Feedback</span>
+                </Badge>
               </div>
-              <h3 className="text-lg font-bold text-brand-950 group-hover:text-brand-700 transition-colors">
-                Quiz Educativo
-              </h3>
-              <p className="text-sm text-calm-muted leading-relaxed">
-                6 perguntas didáticas com feedback imediato e explicações baseadas nas diretrizes científicas.
-              </p>
+
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-brand-950 group-hover:text-brand-700 transition-colors">
+                  Quiz de Conhecimento
+                </h3>
+                <p className="text-xs sm:text-sm text-calm-muted leading-relaxed mt-1">
+                  6 perguntas de múltipla escolha com explicações baseadas em diretrizes da reumatologia e fisioterapia.
+                </p>
+              </div>
             </div>
 
-            <div className="pt-2 flex items-center text-sm font-semibold text-brand-700 group-hover:translate-x-0.5 transition-transform">
-              <span>Fazer o Quiz</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
+            <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-brand-700">
+              <span>Responder às perguntas</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      {/* Pilar Científico e Acadêmico */}
+      {/* Banner de Compromisso Acadêmico e Científico */}
       <section className="bg-sage-50/70 border border-sage-200/80 rounded-2xl p-5 sm:p-6 space-y-3">
         <div className="flex items-center gap-2">
-          <ShieldCheck className="w-5 h-5 text-sage-600" />
-          <h2 className="text-sm font-bold uppercase tracking-wider text-sage-900">
-            Compromisso Ético & Científico
+          <ShieldCheck className="w-5 h-5 text-sage-600 shrink-0" />
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-sage-900">
+            Compromisso Acadêmico & Científico
           </h2>
         </div>
 
-        <p className="text-sm text-sage-950 leading-relaxed">
-          O <strong>FibroInformar</strong> é fruto de uma iniciativa acadêmica do curso de Fisioterapia da <strong>Universidade Nilton Lins</strong> (Orientação: Prof. Luiz Henrique). Cada tópico foi formulado para simplificar conceitos científicos complexos, respeitando o ritmo e a sensibilidade de quem convive com dor crônica.
+        <p className="text-xs sm:text-sm text-sage-950 leading-relaxed">
+          O <strong>FibroInformar</strong> é um projeto de extensão do curso de Fisioterapia da <strong>Universidade Nilton Lins</strong> (Orientação: Prof. Luiz Henrique). Cada módulo traduz evidências científicas para uma linguagem simples e empática, valorizando a autonomia e o bem-estar.
         </p>
 
         <div className="pt-1">
           <button
             onClick={() => navigate('/referencias')}
-            className="text-xs font-bold text-sage-800 hover:text-sage-900 underline flex items-center gap-1"
+            className="text-xs font-bold text-sage-800 hover:text-sage-900 hover:underline inline-flex items-center gap-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-700 rounded-md py-1"
           >
             <span>Consultar referências bibliográficas do projeto</span>
             <ArrowRight className="w-3.5 h-3.5" />
