@@ -34,7 +34,7 @@ export const ReferencesPage: React.FC = () => {
           Projeto de Extensão em Fisioterapia
         </h2>
         <p className="text-xs sm:text-sm text-calm-text leading-relaxed">
-          Esta plataforma integra as atividades acadêmicas desenvolvidas junto à <strong>Universidade Nilton Lins</strong>, sob a orientação do <strong>Prof. Luiz Henrique</strong>. A inteligência artificial foi utilizada estritamente como suporte técnico de engenharia de software e UX/UI; as diretrizes clínicas e conceituais provêm da literatura especializada.
+          Esta plataforma integra as atividades acadêmicas desenvolvidas junto à <strong>Universidade Nilton Lins</strong>, sob a orientação do <strong>Prof. Pablo Costa Cortez</strong>. A inteligência artificial foi utilizada estritamente como suporte técnico de engenharia de software e UX/UI; as diretrizes clínicas e conceituais provêm da literatura especializada.
         </p>
       </div>
 

@@ -187,7 +187,7 @@ export const Home: React.FC = () => {
         </div>
 
         <p className="text-xs sm:text-sm text-sage-950 leading-relaxed">
-          O <strong>FibroInformar</strong> é um projeto de extensão do curso de Fisioterapia da <strong>Universidade Nilton Lins</strong> (Orientação: Prof. Luiz Henrique). Cada módulo traduz evidências científicas para uma linguagem simples e empática, valorizando a autonomia e o bem-estar.
+          O <strong>FibroInformar</strong> é um projeto de extensão do curso de Fisioterapia da <strong>Universidade Nilton Lins</strong> (Orientação: Prof. Pablo Costa Cortez). Cada módulo traduz evidências científicas para uma linguagem simples e empática, valorizando a autonomia e o bem-estar.
         </p>
 
         <div className="pt-1">

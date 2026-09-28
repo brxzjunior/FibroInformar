@@ -18,7 +18,7 @@ O projeto também conta com recursos interativos, como **Mitos e Verdades** e um
 
 O projeto está relacionado a uma atividade acadêmica de extensão na área de Fisioterapia.
 
-A proposta prevê que o aplicativo seja posteriormente apresentado à comunidade acadêmica participante da **Universidade Nilton Lins**, sob orientação do Prof. Luiz Henrique, após as etapas de desenvolvimento, testes e autorização necessárias.
+A proposta prevê que o aplicativo seja posteriormente apresentado à comunidade acadêmica participante da **Universidade Nilton Lins**, sob orientação do Prof. Pablo Costa Cortez, após as etapas de desenvolvimento, testes e autorização necessárias.
 
 ## 🧠 Objetivo
 

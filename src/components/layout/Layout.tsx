@@ -34,7 +34,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <p className="text-[11px] leading-relaxed">
             Projeto Acadêmico de Extensão em <strong>Fisioterapia</strong> • <strong>Universidade Nilton Lins</strong>
             <br />
-            Orientação: <em>Prof. Luiz Henrique</em> • Elaboração: <em>Pablo e equipe</em>
+            Orientação: <em>Prof. Pablo Costa Cortez</em> • Elaboração: <em>Equipe de Fisioterapia</em>
           </p>
           <p className="text-[10px] text-stone-400">
             Conteúdo educativo baseado em evidências científicas. Não substitui consulta médica ou fisioterapêutica.

@@ -70,7 +70,7 @@ export const DisclaimerModal: React.FC<DisclaimerModalProps> = ({ isOpen, onClos
               Contexto Acadêmico
             </h3>
             <p className="text-xs text-calm-muted leading-relaxed">
-              Este projeto faz parte de uma atividade acadêmica de extensão do curso de <strong>Fisioterapia</strong> da <strong>Universidade Nilton Lins</strong>, sob orientação do <strong>Prof. Luiz Henrique</strong>. Os conteúdos são baseados em diretrizes e artigos científicos revisados pela equipe.
+              Este projeto faz parte de uma atividade acadêmica de extensão do curso de <strong>Fisioterapia</strong> da <strong>Universidade Nilton Lins</strong>, sob orientação do <strong>Prof. Pablo Costa Cortez</strong>. Os conteúdos são baseados em diretrizes e artigos científicos revisados pela equipe.
             </p>
           </div>
 
